@@ -1,0 +1,62 @@
+{
+  "manifest_version": 3,
+  "name": "Ultimate Media Controller — Volume Boost, Speed & EQ",
+  "version": "1.2.0",
+  "description": "Boost volume up to 600%, control playback speed, and shape bass/mid/treble for any video or audio on any website.",
+  "author": "Ultimate Media Controller",
+  "minimum_chrome_version": "111",
+  "permissions": ["storage", "activeTab", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "Ultimate Media Controller",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/main-world.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+Shift+M" },
+      "description": "Open the Ultimate Media Controller popup"
+    },
+    "toggle-hud": {
+      "suggested_key": { "default": "Alt+Shift+V" },
+      "description": "Show/hide the on-page control panel"
+    },
+    "volume-up": {
+      "suggested_key": { "default": "Alt+Shift+Up" },
+      "description": "Increase volume"
+    },
+    "volume-down": {
+      "suggested_key": { "default": "Alt+Shift+Down" },
+      "description": "Decrease volume"
+    }
+  }
+}
