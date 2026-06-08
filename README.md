@@ -2,7 +2,6 @@
 
 <img src="assets/banner.png" alt="Ultimate Media Controller" width="100%" />
 
-
 <br/>
 
 <img src="https://readme-typing-svg.demolab.com/?font=Segoe+UI&weight=600&size=24&duration=2600&pause=700&color=7C5CFF&center=true&vCenter=true&width=760&height=46&lines=Boost+volume+up+to+600%25;Speed+from+0.1x+to+16x;Bass%2C+Mid+%26+Treble+equalizer;Draggable+on-page+panel+%2B+hotkeys;Zero+dependencies.+100%25+local." alt="Typing tagline" />
@@ -270,8 +269,4 @@ Released under the **[MIT License](LICENSE)** — free to use, modify and share.
 <sub>Made by Prithwiraj Das and a lot of love for loud, fast, crisp media. 🔊⚡🎚️</sub>
 
 </div>
-#   U l t i m a t e - M e d i a - C o n t r o l l e r 
- 
- #   U l t i m a t e - M e d i a - C o n t r o l l e r 
- 
- 
+#
